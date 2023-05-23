@@ -28,3 +28,5 @@ if ($statement->execute()) {
 
 $json = json_encode($data);
 echo $json;
+
+?>
