@@ -1,30 +1,32 @@
 <?php
 
 
-// // require "dbconnection.php";
-// // $dbcon = createDbConnection();
+// require "dbconnection.php";
+// $dbcon = createDbConnection();
 
 // $albumTitle1 = 'Graduation';
 // $albumTitle2 = 'Whole Lotta Red';
 // $albumArtistId1 = 1;
 // $albumArtistId2 = 2;
 
-// // // Lisää johonkin tauluun kaksi uutta riviä koodilla.
-// // $sql = "INSERT INTO albums (Title, ArtistId) VALUES (?, ?), (?, ?)";
+// Lisää johonkin tauluun kaksi uutta riviä koodilla.
+// $sql = "INSERT INTO albums (Title, ArtistId) VALUES (?, ?), (?, ?)";
 
-// // $statement1 = $dbcon->prepare($sql);
-// // $statement1->bindParam(1, $albumTitle1);
-// // $statement1->bindParam(2, $albumArtistId1);
-// // $statement1->bindParam(3, $albumTitle2);
-// // $statement1->bindParam(4, $albumArtistId2);
-// // $statement1->execute();
-
-
-require "dbconnection.php";
-$dbcon = createDbConnection();
+// $statement1 = $dbcon->prepare($sql);
+// $statement1->bindParam(1, $albumTitle1);
+// $statement1->bindParam(2, $albumArtistId1);
+// $statement1->bindParam(3, $albumTitle2);
+// $statement1->bindParam(4, $albumArtistId2);
+// $statement1->execute();
 
 
-if (isset($_POST['Title1'], $_POST['Title2'], $_POST['ArtistId1'], $_POST['ArtistId2'])) {
+    require "dbconnection.php";
+    $dbcon = createDbConnection();
+
+    /* harj1.php: Lisää johonkin tauluun kaksi uutta riviä koodilla.
+    Lisää edelliseen tehtävään ominaisuus, että tiedot saadaan jollain tavalla parametreina tiedostoon (POST-toiminto) */
+
+    if (isset($_POST['Title1'], $_POST['Title2'], $_POST['ArtistId1'], $_POST['ArtistId2'])) {
     $albumTitle1 = $_POST['Title1'];
     $albumTitle2 = $_POST['Title2'];
     $albumArtistId1 = $_POST['ArtistId1'];
@@ -48,7 +50,8 @@ if (isset($_POST['Title1'], $_POST['Title2'], $_POST['ArtistId1'], $_POST['Artis
     }
 } else {
     echo "Tarvittavat parametrit puuttuvat!";
-}
+};
+
 
     // https://prnt.sc/VBAoaplJJuhA
     //

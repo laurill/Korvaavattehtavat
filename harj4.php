@@ -3,6 +3,7 @@
 require "dbconnection.php";
 $dbcon = createDbConnection();
 
+    // harj4.php: Lisää tai päivitä transaktiona ainakin kahden eri taulun tietoa.
 $sql= "INSERT INTO media_types (Name) VALUES ('foobar1')";
     $sql2 = "UPDATE media_types SET Name = 'Paivitetty' WHERE MediaTypeId = 5";
 
